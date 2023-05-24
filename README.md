@@ -153,3 +153,34 @@ Output:
 <img src="./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/04.SpecialChars.png" alt = "Special Char output"/>
 
 ---
+
+## Writing Comments in JS code
+
+Comments are the line of code that is ignored by the Compiler. This is beneficial for the user to understand the codebase.
+
+There are two types of comments in any programming language:
+
+- Single-line comment
+- Multiline comment
+
+The single-line comment is presented by `//`
+
+The Multiline comment is presented by `/* ... */`
+
+Example:
+
+```js
+// this is comment
+// I am declaring a variable which store the name of the person 👍
+var userName = "Swayam";
+
+/*
+This are multiline comments
+.
+.
+.
+.
+*/
+```
+
+---
