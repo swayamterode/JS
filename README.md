@@ -26,18 +26,18 @@ The Js code will still run if you miss writing the `;` but it is considered as b
 
 ## Showing data to the user
 
-Displaying some value to the user will use `console.log()`. This is an built-in Function of JS.
+Displaying some value to the user will use `console.log()`. This is a built-in Function of JS.
 
-This will take some input and it will displays us some output.
+This will take some input and it will display some output.
 
 - We can pass direct value inside the `console.log()`  
   **Example:** `console.log(10)` will give us 10 as the output!
 
 - We can even pass the variable to the `console.log()`
   **Example:** let num = 10;
-  `console.log(num)` will give us 10 as the output because num as 10 stored in it
+  `console.log(num)` will give us 10 as the output because num is 10 stored in it
 
-We can also pass multiple values to the console.log() which will print in same line ❗️
+We can also pass multiple values to the console.log() which will print in the same line ❗️
 
 Example:
 
@@ -49,5 +49,85 @@ console.log(12, name, "Pune");
 Output:
 
 12 Swayam Terode Pune
+
+---
+
+## DataTypes In JS Primitives and Non Primitives
+
+**Primitve DataTypes:**
+
+- Atomic DataTypes.
+
+  Example: Number
+
+**Non-Primitive DataTypes:**
+
+- DataType which is a composition of some other types.
+
+  Example: Objects
+
+What values we can store in JS?
+
+1. **Number**: `0`, `-324`, `234`, etc .....
+
+2. **String**: Either "Swayam" OR 'Swayam' are the correct ways to declare a string. You can also use backtick ` `` `.
+
+3. Boolean: True or False these technical keywords. In other words `0` or `1`
+4. **Undefined**: This is keyword.
+
+   This signifies that something which is not defined yet but may be in the future will be defined 🤔...
+
+5. **Objects**: If we want to store the key-value pair then we use Objects. Here the key will be unique.
+
+Example:
+
+```js
+//NUMBER
+console.log("\nNumber DataType ⬇️\n");
+var num = 10;
+console.log(num);
+
+// STRING
+// there are three ways to define string
+console.log("\nString DataType ⬇️\n");
+var myName = `Swayam`;
+console.log("Using backticks:", myName);
+myName = "Akshay";
+console.log("Using double quotes:", myName);
+myName = "Kartik";
+console.log("Using single quotes:", myName);
+
+// BOOLEAN - true or false
+console.log("\nBoolean DataType ⬇️\n");
+var time = "10pm";
+if (time == "10pm") console.log(true);
+
+var time = "1pm";
+if (time == "10pm") console.log(true);
+else console.log(false);
+
+// UNDEFINED
+console.log("\nnUnderstanding Undefined DataType ⬇️\n");
+var profession;
+console.log(profession);
+
+//OBJECTS
+//acts as key-value pair❗️
+console.log("\nUnderstanding Objects as Non-Primitive DataType ⬇️\n");
+var person = {
+  name: "Swayam Terode",
+  age: 21,
+  gender: "Male",
+  address: "📍Pune",
+  college: "SPPU",
+};
+console.log(person);
+```
+
+Output: 
+
+![3.DataType](./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/03.DataTypes.png)
+
+[Link to Code](./01.%20Introduction%20to%20Programming%20with%20JS/03.DataTypes_In_JS_Primitives_and_Non_Primitives.js)
 
 ---
