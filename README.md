@@ -124,10 +124,32 @@ var person = {
 console.log(person);
 ```
 
-Output: 
+Output:
 
 ![3.DataType](./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/03.DataTypes.png)
 
 [Link to Code](./01.%20Introduction%20to%20Programming%20with%20JS/03.DataTypes_In_JS_Primitives_and_Non_Primitives.js)
+
+---
+
+## Using Special characters
+
+In Js, there are many special characters but the most commonly used special character are `\n` and `\t`.
+
+- `\n`: This means the end of the line.
+- `\t`: This provides 4 spaces to the text.
+
+Example:
+
+```js
+var text = "My name is Swayam \nI'm from Pune";
+console.log(text);
+text = "My name is Swayam \tI'm from Pune";
+console.log(text);
+```
+
+Output:
+
+<img src="./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/04.SpecialChars.png" alt = "Special Char output"/>
 
 ---
