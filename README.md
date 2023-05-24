@@ -184,3 +184,31 @@ This are multiline comments
 ```
 
 ---
+
+## Operators
+
+There are different types of operators
+
+1. Arithmetic Operations:
+
+- `+` : Addition
+- `-` : Subtarction
+- `/` : Division
+- `*` : Multiplication
+- `%` : Gives Remainder
+- `**` : Exponent
+
+Operands: Values on which we want to do operations
+
+2. Assignment Operators
+
+- `=` : Directly assigns the value to the variable.
+- `+=` : This is same as A = A + 2 OR A+=2 both are same.
+- `-=` : This is same as A = A - 2 OR A-=2 both are same.
+- `*=` : This is same as A = A _ 2 OR A_=2 both are same.
+- `/=` : This is same as A = A / 2 OR A/=2 both are same.
+- `%=` : This is same as A = A % 2 OR A%=2 both are same.
+
+[link to code](./01.%20Introduction%20to%20Programming%20with%20JS/05.Operators.js)
+
+---
