@@ -1,6 +1,6 @@
 # JavaScript Revision 🚀
 
-### Coding Variables In JS
+## Coding Variables In JS
 
 <details>
 
@@ -38,7 +38,9 @@ There are three ways to declare a variable in JS:
 ----
 </details> -->
 
-### Showing data to the user
+<br>
+
+## Showing data to the user
 
 <details>
 
@@ -76,7 +78,9 @@ console.log(12, name, "Pune");
 
 </details>
 
-### DataTypes
+<br>
+
+## DataTypes
 
  <details>
  
@@ -96,7 +100,7 @@ console.log(12, name, "Pune");
 
   Example: Objects
 
-#### What values we can store in JS?
+### What values we can store in JS?
 
 1. **Number**: `0`, `-324`, `234`, etc .....
 
@@ -122,8 +126,10 @@ console.log(num);
 console.log("\nString DataType ⬇️\n");
 var myName = `Swayam`;
 console.log("Using backticks:", myName);
+
 myName = "Akshay";
 console.log("Using double quotes:", myName);
+
 myName = "Kartik";
 console.log("Using single quotes:", myName);
 
@@ -154,17 +160,19 @@ var person = {
 console.log(person);
 ```
 
-Output:
+**Output:**
 
-![3.DataType](./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/03.DataTypes.png)
+![3.DataType](./Programming%20with%20JS/consoleOutputs/03.DataTypes.png)
 
-[Link to Code](./01.%20Introduction%20to%20Programming%20with%20JS/03.DataTypes_In_JS_Primitives_and_Non_Primitives.js)
+[Code 🔗](./Programming%20with%20JS/01.Basics/03.DataTypes_In_JS_Primitives_and_Non_Primitives.js)
 
 ---
 
   </details>
 
-### Using Special Characters
+<br>
+
+## Using Special Characters
 
 <details>
 
@@ -192,7 +200,9 @@ Output:
 
 </details>
 
-### Writing Comments in JS code
+<br>
+
+## Writing Comments in JS code
 
 <details>
 
@@ -231,7 +241,9 @@ This are multiline comments
 
 </details>
 
-### Operators
+<br>
+
+## Operators
 
 <details>
 
@@ -265,7 +277,9 @@ There are different types of operators
 
 </details>
 
-### Object
+<br>
+
+## Object
 
 <details>
  
@@ -273,102 +287,100 @@ There are different types of operators
  
 <br>
  
-**Objects has property and behaviour.** Collection of key value pair.
+> **Objects has property and behaviour.** Collection of key value pair.
 
-#### How do we add behaviour to the object?
+**How do we add behaviour to the object?**
 
-- We can add behaviour by the means of function. But any function created inside the object is **`Method`**.
+We can add behaviour by the means of function. But any function created inside the object is **`Method`**.
 
-### Object creation
+### a. Object creation
 
-<details>
+- <details>
 
-<summary>Details</summary>
+    <br>
 
-<br>
+  ```js
+  const objectName = {
+    property1: value,
+    property2: "value",
+    property3: 10,
 
-```js
-const objectName = {
-  property1: value,
-  property2: "value",
-  property3: 10,
+    //Method -> which give behaviour to the Object
+    functionName: function () {
+      //console.log("I am a Method!")
+      //args...
+    },
+  };
+  ```
 
-  //Method -> which give behaviour to the Object
-  functionName: function () {
-    //console.log("I am a Method!")
-    //args...
-  },
-};
-```
+  Example:
 
-Example:
+  ```js
+  const rectangle = {
+    length: 1,
+    breadth: 2,
+    draw: function () {
+      console.log("This is Draw Method!");
+    },
+  };
+  ```
 
-```js
-const rectangle = {
-  length: 1,
-  breadth: 2,
-  draw: function () {
-    console.log("This is Draw Method!");
-  },
-};
-```
+  ***
 
-</details>
+    </details>
 
-### Accessing the value of the objects:
+### b. Accessing the value of the objects:
 
-<details>
+- <details>
 
-<summary>Details</summary>
+  Whenever we want to call the properties of the object we can use:
 
-Whenever we want to call the properties of the object we can use:
+  ```js
+  console.log(rectangle.length);
+  // rectangle.length in console directly 🚀
+  ```
 
-```js
-console.log(rectangle.length);
-// rectangle.length in console directly 🚀
-```
+  **Output:**
 
-Output:
+  ```text
+  1
+  ```
 
-```text
-1
-```
+  But when we have to call the **Method** we simply call it by:
 
-But when we have to call the **Method** we simply call it by:
+  ```js
+  rectangle.draw();
+  ```
 
-```js
-rectangle.draw();
-```
+  **Output:**
 
-Output:
+  ```js
+  This is Draw Method!
+  ```
 
-```js
-This is Draw Method!
-```
+  ```js
+  rectangle.draw; //this wont print anything as draw is an Method!
+  ```
 
-```js
-rectangle.draw; //this wont print anything as draw is an Method!
-```
+  ***
 
-</details>
+    </details>
 
-### Two ways to create Object
-
-<details>
-
-<summary>Details</summary>
+  </details>
 
 <br>
 
-**`Factory Function`**
+## Two ways to create Object
 
 <details>
 
-<summary>Detials</summary>
+### `Factory Function`
+
+<details>
 
 <br>
 
-- Factory function is mainly used to create multiple objects.
+> Factory function is mainly used to create multiple objects.
 
 **Syntax:**
 
@@ -384,7 +396,7 @@ function createRectangle() {
 }
 ```
 
-- Accessing prop of the factory function:
+**Accessing prop of the factory function:**
 
 ```js
 let obj1 = createRectangle(); //this is how you access the factory function.
@@ -393,7 +405,7 @@ console.log(obj1.length); //this is how ypu can access any property.
 console.log(obj1.display()); //this is how you access the METHOD.
 ```
 
-- Passing parameters to the factory function:
+**Passing parameters to the factory function:**
 
 ```js
 function createUser(name, age) {
@@ -407,7 +419,7 @@ function createUser(name, age) {
 }
 ```
 
-- Passing arguments to the factory function:
+**Passing arguments to the factory function:**
 
 ```js
 let obj = createUser("Ravi", 43); // Creating an object using the factory function and passing parameters.
@@ -416,13 +428,13 @@ console.log(obj); // Printing the created factory function -> gives o/p as Objec
 
 ---
 
+<br>
+
 </details>
 
-**`Constructor Function`**
+### `Constructor Function`
 
 <details>
-
-<summary>Details</summary>
 
 - A constructor function is a function that is used to create objects.
 
@@ -450,7 +462,9 @@ let obj2 = new Person();
 
 </details>
 
-### Dynamic Nature of Objects
+<br>
+
+## Dynamic Nature of Objects
 
 <details>
 
@@ -482,66 +496,93 @@ console.log(person1);
 
 **Output:**
 
-![1](./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/5.DynamicNatureOfObejcts_1.png)
-![1](./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/6.DynamicNatureOfObejcts_2.png)
+![1](../JS/Programming%20with%20JS/consoleOutputs/5.DynamicNatureOfObejcts_1.png)
+
+![2](../JS/Programming%20with%20JS/consoleOutputs/6.DynamicNatureOfObejcts_2.png)
+
 
 > Functions are Object
-
 > - Primitives are copied by the values.
 >
 > - References are copied by their Address ⭐️
 
-<!-- End of dynamic Objects  -->
-
 ---
 
 </details>
-
-### Iterating through Loops
-
-<!-- for-in loop -->
-
-<details>
-
-<summary>Details</summary>
 
 <br>
 
+## Iterating through Loops
+
 <details>
+  
+  <br>
 
-<summary>for-in loop</summary>
+- <details>
 
-```js
-const car = {
-  car1: "Audi",
-  car2: "BMW",
-};
+  <summary>for-in loop</summary>
 
-for (let key in car) {
-  console.log(key, car[key]);
-}
-```
+  ```js
+  const car = {
+    car1: "Audi",
+    car2: "BMW",
+  };
 
-> You can access the `car1:"Audi"` by `car1` by `key` and `Audi` by `car1[key]`.
+  for (let key in car) {
+    console.log(key, car[key]);
+  }
+  ```
+
+  > You can access the `car1:"Audi"` by `car1` by `key` and `Audi` by `car1[key]`.
+
+  <br>
+
+  </details>
+
+  <br>
+
+- <details>
+
+  <summary>for-of loop</summary>
+
+  ```js
+  const countries = ["India", "Sri Lanka", "China", "USA"];
+  const newCountries = [];
+
+  // for of loop
+  for (let country of countries) {
+    newCountries.push(country.toUpperCase());
+  }
+  ```
+
+  **Code Explaination:**
+
+  - The code declares a constant variable called countries and assigns an array of country names to it: ["India", "Sri Lanka", "China", "USA"].
+  - It declares an empty array called newCountries.
+  - It uses a for...of loop to iterate over each element (country name) in the countries array.
+  - Inside the loop, it converts each country name to uppercase using the toUpperCase() method.
+  - It appends the capitalized country name to the newCountries array using the push() method.
+  - After the loop finishes, the newCountries array will contain the capitalized versions of the country names from the countries array.
+
+  **Output:**
+
+  ```js
+  ["INDIA", "SRI LANKA", "CHINA", "USA"];
+  ```
+
+  </details>
+
+  ***
+
+  <br>
 
 </details>
 
-<!-- for-of loop -->
-<details>
-
-<summary>for-of loop</summary>
-
-> Can be applied only on Iterables i.e. Arrays and Maps.
-
 </details>
 
-</details>
+<br>
 
----
-
-</details>
-
-### Object Cloning
+## Object Cloning
 
 <details>
 
@@ -617,8 +658,10 @@ console.log("==========================================================\n");
 
 <img src= "./01. Introduction to Programming with JS/consoleOutputs/Object cloning.png">
 
-[Code 🔗](./01.%20Introduction%20to%20Programming%20with%20JS/07.Object%20Cloning.js)
+[Code 🔗](../JS/Programming%20with%20JS/01.Basics/07.Object%20Cloning.js)
 
 ---
 
 </details>
+
+<br>
