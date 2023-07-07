@@ -4,9 +4,7 @@
 
 <details>
 
-<summary>Details</summary>
-
-<br/>
+<br>
 
 There are three ways to declare a variable in JS:
 
@@ -37,8 +35,6 @@ There are three ways to declare a variable in JS:
 
 ----
 </details> -->
-
-<br>
 
 ## Showing data to the user
 
@@ -78,7 +74,6 @@ console.log(12, name, "Pune");
 
 </details>
 
-<br>
 
 ## DataTypes
 
@@ -111,11 +106,11 @@ console.log(12, name, "Pune");
 
    This signifies that something which is not defined yet but may be in the future will be defined 🤔...
 
-5. **Objects**: If we want to store the key-value pair then we use Objects. Here the key will be unique.
+5. **Objects**: If we want to store the key-value pair, we  use Objects. Here the key will be unique.
 
 Example:
 
-```js
+``` js
 //NUMBER
 console.log("\nNumber DataType ⬇️\n");
 var num = 10;
@@ -168,15 +163,14 @@ console.log(person);
 
 ---
 
-  </details>
+</details>
 
-<br>
 
 ## Using Special Characters
 
 <details>
 
-<summary>Details</summary>
+<br>
 
 In Js, there are many special characters but the most commonly used special character are `\n` and `\t`.
 
@@ -194,54 +188,459 @@ console.log(text);
 
 Output:
 
-<img src="./01.%20Introduction%20to%20Programming%20with%20JS/consoleOutputs/04.SpecialChars.png" alt = "Special Char output"/>
+<img src="./Programming%20with%20JS/consoleOutputs/04.SpecialChars.png" alt = "Special Char output"/>
 
 ---
 
 </details>
 
-<br>
+<!---Array Methods Here--->
 
-## Writing Comments in JS code
+## Initializing an Array
 
 <details>
 
-<summary>Details</summary>
-
 <br>
 
-Comments are the line of code that is ignored by the Compiler. This is beneficial for the user to understand the codebase.
-
-There are two types of comments in any programming language:
-
-- Single-line comment
-- Multiline comment
-
-The single-line comment is presented by `//`
-
-The Multiline comment is presented by `/* ... */`
-
-Example:
+The variable names is declared and assigned an array of strings.
+The array contains four elements: `"Swayam", "Ram", "Sham",` and `"Raj"`.
 
 ```js
-// this is comment
-// I am declaring a variable which store the name of the person 👍
-var userName = "Swayam";
+let names = ["Swayam", "Ram", "Sham", "Raj"];
+```
 
-/*
-This are multiline comments
-.
-.
-.
-.
-*/
+**Outputting the Array:**
+
+```js
+console.log(names); // [ 'Swayam', 'Ram', 'Sham', 'Raj' ]
+```
+
+The code uses `console.log()` to print the value of the names array to the console.
+
+**Another way of Declaring an Array (Not Recommended ❌):**
+
+The code demonstrates an alternative way of declaring an array using the `new Array()` syntax. However, this method is not recommended and is less commonly used.
+
+```js
+let myNames = new Array("Name1", "Name2");
 ```
 
 ---
 
 </details>
 
+## Playing with index and `.length`
+
+<details>
+
 <br>
+Consider this array
+
+```js
+let names = ["Swayam", "Ram", "Sham", "Raj"];
+```
+
+**Length of the array:**
+
+The code starts by outputting a message to the console to indicate that it will display the length of the array.
+
+```js
+console.log(names.length); //4
+```
+
+**Displaying the array before modification:**
+
+The code uses console.log() to print the current value of the names array to the console.
+
+```js
+console.log("Before: ", names); // Before:  [ 'Swayam', 'Ram', 'Sham', 'Raj' ]
+```
+
+**Modifying an array element:**
+
+The code modifies the value at index 3 of the names array. It replaces the string "Raj" with "Vivek".
+
+```js
+names[3] = "Vivek"; // replacing string value at index 3 with Vivek.
+```
+
+**Displaying the array after modification:**
+
+The code uses console.log() to print the modified value of the names array to the console.
+
+```js
+console.log("After: ", names); // After:  [ 'Swayam', 'Ram', 'Sham', 'Vivek' ]
+```
+
+---
+
+</details>
+
+## Methods in Arrays
+
+<details>
+
+### 1. push( )
+
+<details>
+
+<br>
+
+> `.push()` method is used to add one or more elements to the end of an array.
+
+**Displaying the array before modification:**
+
+```js
+console.log("\nBefore: ", names);
+// [ 'Swayam', 'Ram', 'Sham', 'Vivek', 'Rahul' ]
+```
+
+**Inserting a new value at the end of the array:**
+
+`.push()` method to add the string "Rahul" to the end of the names array.
+
+```js
+names.push("Rahul");
+```
+
+**Displaying the array after modification:**
+
+```js
+console.log("After: ", names);
+// [ 'Swayam', 'Ram', 'Sham', 'Vivek', 'Rahul' ]
+```
+
+---
+
+</details>
+
+### 2. pop( )
+
+<details>
+
+<br>
+
+- pops **last element** form the array.
+
+```js
+const num = [2, 3, 4, 5, 61, 1, 777];
+num.pop(); //77
+console.log(num);
+// [ 2, 3, 4, 5, 61, 1 ]
+```
+
+---
+
+</details>
+
+### 3. slice( )
+
+<details>
+
+<br>
+
+Using the `.slice()` method:
+
+- This method allows us to create a new array that contains a portion of the original array, **specified by the starting and ending indices**.
+
+```js
+let names = [ 'Swayam', 'Ram', 'Sham', 'Vivek', 'Rahul' ]
+console.log("names);
+// [ 'Swayam', 'Ram', 'Sham', 'Vivek', 'Rahul' ]
+console.log(names.slice(1, 3));
+// [ 'Ram', 'Sham' ]
+```
+
+The code utilizes the `.slice()` method on the names array.
+
+- In this case, `.slice(1, 3)` is called on the names array. It creates a new array that includes elements **starting from index 1 (inclusive) and ending before index 3 (exclusive).**
+
+- Therefore, it extracts elements at indices `1` and `2`, which are `"Ram"` and `"Sham"` respectively.
+
+---
+
+</details>
+
+### 4. splice( )
+
+<details>
+
+<br>
+
+`.splice()` is used to modify an array **by removing, replacing, or adding elements** at a specified position.
+
+```js
+let fruits = ["Banana", "Apple", "Pineaaple", "watermellon"];
+fruits.splice(1, 2, "Kiwi");
+console.log("After: ", fruits);
+// [ 'Banana', 'Kiwi', 'watermellon' ]
+```
+
+- In this case, `.splice(1, 2, "Kiwi")` is called on the fruits array. **This means starting at index 1, two elements will be removed, and the element "Kiwi" will be added in their place**.
+- As a result, the element at index 1 ("Apple") and the element at index 2 ("Pineapple") are removed, and "Kiwi" is inserted in their position.
+
+---
+
+</details>
+
+### 5. concat()
+
+<details>
+
+<br>
+
+`concat()` method is used to combine two or more arrays into a new array. Here's an explanation of how concat() works:
+
+```js
+let array1 = [42, 2, 32];
+let array2 = ["a", "gg", "cs"];
+let array3 = [true, false];
+
+let newArray = array1.concat(array2, array3);
+console.log(newArray);
+// [42, 2, 32, "a", "gg", "cs", true, false]
+```
+
+---
+
+</details>
+
+### 6. fill( )
+
+<details>
+
+<br>
+
+`.fill()` method is used to fill all the elements of an array with a specified value. Here's an explanation of how .fill() works:
+
+**Syntax:**
+
+```js
+array.fill(value, start, end);
+```
+
+```js
+let cars = ["Honda", "Audi", "BMW", "Nothing", "Kia", "newCar"];
+cars.fill("Maruti", 0, 3);
+console.log(cars);
+// Modified array: ["Maruti", "Maruti", "Maruti", "Nothing", "Kia", "newCar"]
+```
+
+The method `.fill()` is provided with three arguments:
+
+- The value to fill the array with, which is "Maruti".
+  - The **start index**, which is `0`. It indicates the index from which the filling should **start**.
+  - The **end index**, which is `3`. It indicates the index before which the filling should **stop** (exclusive).
+- Therefore, the elements at indices 0, 1, and 2 of the cars array ("Honda", "Audi", and "BMW") will be replaced with the value "Maruti".
+
+---
+
+</details>
+
+### 7. includes( )
+
+<details>
+
+<br>
+
+The `.includes()` method returns a boolean value.
+It returns true if the specified element is found in the array, and false otherwise.
+
+```js
+// cars = ["Maruti", "Maruti", "Maruti", "Nothing", "Kia", "newCar"]
+let ans = cars.includes("Kia");
+console.log(ans); //returns true as Kia is present in the array.
+
+ans = cars.includes("Ferrari");
+console.log(ans); //returns flase as Ferrari is not present in the array.
+```
+
+---
+
+</details>
+
+### 8. indexOf()
+
+<details>
+
+<br>
+
+The `.indexOf()` method returns the index of the first occurrence of the specified element within the array.
+
+```js
+const num = [1, 23, 4, 5, 4];
+console.log(indexOf(4)); //returns 2
+```
+
+---
+
+</details>
+
+### 9. Array.isArray()
+
+<details>
+
+<br>
+
+The `Array.isArray()` method returns a boolean value.
+
+- It returns true if the provided value is an array.
+- It returns false if the provided value is not an array.
+
+```js
+let numbers = [1, 2, 3];
+console.log(Array.isArray(numbers)); // true
+
+let name = "John";
+console.log(Array.isArray(name)); // false
+
+let object = { key: "value" };
+console.log(Array.isArray(object)); // false
+```
+
+---
+
+</details>
+
+### 10. join()
+
+<details>
+
+<br>
+
+**Parameters**:
+
+**separator** (optional): The string used to separate each element of the array when they are concatenated into a single string. If not provided, a comma (,) is used as the default separator.
+Return Value:
+
+The `.join()` method returns a new string that is the result of concatenating all the elements of the array together, separated by the specified separator.
+
+```js
+let fruits = ["apple", "banana", "cherry"];
+let result = fruits.join(", ");
+
+console.log(result); // "apple, banana, cherry"
+```
+
+---
+
+</details>
+
+### 11. reverse( )
+
+<details>
+
+<br>
+
+- reverse the entire array.
+
+```js
+let fruits = ["apple", "banana", "cherry"];
+fruits.reverse();
+console.log(fruits);
+//["cherry", "banana", "apple" ]
+```
+
+----
+
+</details>
+
+### 12. shift( )
+
+<details>
+
+<br>
+
+**Parameters:**
+
+The `.shift()` method does not accept any parameters.
+
+**Return Value:**
+
+The `.shift()` method removes and returns the first element of an array.
+
+```js
+let numbers = [1, 2, 3, 4, 5];
+
+let shiftedNumber = numbers.shift();
+console.log(shiftedNumber); // 1
+console.log(numbers); // [2, 3, 4, 5]
+```
+
+---
+
+</details>
+
+### 13. unshift( )
+
+<details>
+
+<br>
+
+**Syntax:**
+
+```js
+array.unshift(element1, element2, ..., elementN)
+```
+
+**Parameters:**
+
+element1, element2, ..., elementN: The elements to be added to the beginning of the array.
+
+**Return Value:**
+
+- The .unshift() method modifies the original array by adding one or more elements to the beginning of the array.
+- It returns the new length of the array after the elements have been added.
+
+**Functionality:**
+
+- The `.unshift()` method adds one or more elements to the beginning of an array.
+- It shifts the existing elements to higher indices to make space for the new elements.
+- The elements are appended in the order they are provided as arguments, so the first element specified will be the first element in the modified array.
+
+**Example:**
+
+```js
+let numbers = [4, 5, 6];
+
+let newLength = numbers.unshift(1, 2, 3);
+console.log(newLength); // 6
+console.log(numbers); // [1, 2, 3, 4, 5, 6]
+```
+
+---
+
+</details>
+
+<!-- Methods End -->
+
+### 14. split()
+
+<details>
+
+<br>
+
+- The `.split()` method takes a string and splits it into an array of substrings based on the specified separator.
+- It scans the original string from left to right and separates it into substrings whenever the separator is encountered.
+- The resulting substrings are stored as elements in the resulting array.
+- If the separator is not found in the string, the resulting array will contain only one element, which is the entire original string.
+
+```js
+let sentence = "This is a sample sentence.";
+
+let words = sentence.split(" ");
+console.log(words); // ["This", "is", "a", "sample", "sentence."]
+
+let characters = sentence.split("");
+console.log(characters);
+// ["T", "h", "i", "s", " ", "i", "s", " ", "a", " ", "s", "a", "m", "p", "l", "e", " ", "s", "e", "n", "t", "e", "n", "c", "e", "."]
+```
+
+</details>
+
+---
+
+</details>
 
 ## Operators
 
@@ -277,7 +676,6 @@ There are different types of operators
 
 </details>
 
-<br>
 
 ## Object
 
@@ -289,9 +687,9 @@ There are different types of operators
  
 > **Objects has property and behaviour.** Collection of key value pair.
 
-**How do we add behaviour to the object?**
+**How do we add behavior to the object?**
 
-We can add behaviour by the means of function. But any function created inside the object is **`Method`**.
+We can add behavior by means of function. But any function created inside the object is **`Method`**.
 
 ### a. Object creation
 
@@ -299,13 +697,13 @@ We can add behaviour by the means of function. But any function created inside t
 
     <br>
 
-  ```js
+  ``` js
   const objectName = {
     property1: value,
     property2: "value",
     property3: 10,
 
-    //Method -> which give behaviour to the Object
+    //Method -> which gives behaviour to the Object
     functionName: function () {
       //console.log("I am a Method!")
       //args...
@@ -315,7 +713,7 @@ We can add behaviour by the means of function. But any function created inside t
 
   Example:
 
-  ```js
+  ``` js
   const rectangle = {
     length: 1,
     breadth: 2,
@@ -335,7 +733,7 @@ We can add behaviour by the means of function. But any function created inside t
 
   Whenever we want to call the properties of the object we can use:
 
-  ```js
+  ``` js
   console.log(rectangle.length);
   // rectangle.length in console directly 🚀
   ```
@@ -359,7 +757,7 @@ We can add behaviour by the means of function. But any function created inside t
   ```
 
   ```js
-  rectangle.draw; //this wont print anything as draw is an Method!
+  rectangle.draw; //this won't print anything as the draw is a Method!
   ```
 
   ***
@@ -368,9 +766,7 @@ We can add behaviour by the means of function. But any function created inside t
 
   </details>
 
-<br>
-
-## Two ways to create Object
+## Two ways to create an Object
 
 <details>
 
@@ -428,8 +824,6 @@ console.log(obj); // Printing the created factory function -> gives o/p as Objec
 
 ---
 
-<br>
-
 </details>
 
 ### `Constructor Function`
@@ -461,8 +855,6 @@ let obj2 = new Person();
 ---
 
 </details>
-
-<br>
 
 ## Dynamic Nature of Objects
 
@@ -509,8 +901,6 @@ console.log(person1);
 ---
 
 </details>
-
-<br>
 
 ## Iterating through Loops
 
@@ -580,7 +970,6 @@ console.log(person1);
 
 </details>
 
-<br>
 
 ## Object Cloning
 
